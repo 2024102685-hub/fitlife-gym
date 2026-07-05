@@ -1,0 +1,193 @@
+/* ==========================================================
+   TRAINER DIRECTORY PAGE
+========================================================== */
+
+/* ==========================================
+   TRAINER SECTION
+========================================== */
+
+.trainer-section {
+
+    padding: 80px 0;
+
+    background: #F8F8F8;
+
+}
+
+.trainer-section h1 {
+
+    font-size: 50px;
+
+    font-weight: 800;
+
+    color: #F26A21;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+}
+
+.trainer-section p {
+
+    color: #666;
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
+
+}
+
+/* ==========================================
+   TRAINER CARD
+========================================== */
+
+.trainer-card {
+
+    background: #1E1E1E;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .35s;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+    height: 100%;
+
+}
+
+.trainer-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(242, 106, 33, .30);
+
+}
+
+/* ==========================================
+   TRAINER IMAGE
+========================================== */
+
+.trainer-image {
+
+    width: 100%;
+
+    height: 330px;
+
+    object-fit: cover;
+
+}
+
+/* ==========================================
+   TRAINER CONTENT
+========================================== */
+
+.trainer-content {
+
+    padding: 25px;
+
+    text-align: center;
+
+}
+
+.trainer-content h3 {
+
+    color: #F26A21;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+}
+
+.trainer-content h5 {
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+
+}
+
+.trainer-content p {
+
+    color: #CCCCCC;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.trainer-btn {
+
+    display: inline-block;
+
+    background: #F26A21;
+
+    color: #FFFFFF;
+
+    padding: 10px 30px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.trainer-btn:hover {
+
+    background: #FFFFFF;
+
+    color: #F26A21;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:991px) {
+
+    .trainer-card {
+
+        margin-bottom: 30px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .trainer-section {
+
+        padding: 60px 0;
+
+    }
+
+    .trainer-section h1 {
+
+        font-size: 38px;
+
+    }
+
+    .trainer-image {
+
+        height: 280px;
+
+    }
+
+}

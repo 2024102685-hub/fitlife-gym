@@ -1,0 +1,241 @@
+/* ==========================================================
+   ABOUT PAGE
+========================================================== */
+
+.about-section {
+
+    padding: 120px 0 80px;
+
+    background: #F8F8F8;
+
+}
+
+/* ==========================================================
+   BLACK CARD
+========================================================== */
+
+.about-wrapper {
+
+    background: #1E1E1E;
+
+    border-radius: 35px;
+
+    padding: 60px;
+
+    margin-top: 40px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .18);
+
+    overflow: hidden;
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.about-image {
+
+    height: 100%;
+
+}
+
+.about-image img {
+
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    display: block;
+
+}
+
+/* ==========================================================
+   STORY
+========================================================== */
+
+.story-card {
+
+    background: transparent;
+
+    box-shadow: none;
+
+    padding: 0;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.story-card h2 {
+
+    color: #F26A21;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+
+}
+
+.orange-line {
+
+    width: 80px;
+
+    height: 4px;
+
+    background: #F26A21;
+
+    border-radius: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+.story-card p {
+
+    color: #E5E5E5;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+}
+
+/* ==========================================================
+   VISION & MISSION
+========================================================== */
+
+.vision-mission {
+
+    padding: 80px 0;
+
+    background: #F8F8F8;
+
+}
+
+.vm-card {
+
+    background: #1E1E1E;
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    height: 100%;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+
+    transition: .35s;
+
+    border: 1px solid rgba(242, 106, 33, .20);
+
+}
+
+.vm-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 45px rgba(242, 106, 33, .35);
+
+}
+
+.vm-card h3 {
+
+    color: #F26A21;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+}
+
+.vm-card p {
+
+    color: #E5E5E5;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin: 0;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:991px) {
+
+    .about-wrapper {
+
+        padding: 35px;
+
+    }
+
+    .about-image {
+
+        margin-bottom: 30px;
+
+    }
+
+    .about-image img {
+
+        height: 380px;
+
+    }
+
+    .story-card {
+
+        text-align: center;
+
+    }
+
+    .orange-line {
+
+        margin: 0 auto 25px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .about-wrapper {
+
+        padding: 25px;
+
+    }
+
+    .about-image img {
+
+        height: 280px;
+
+    }
+
+    .story-card h2 {
+
+        font-size: 34px;
+
+    }
+
+}

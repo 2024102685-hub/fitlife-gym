@@ -1,0 +1,155 @@
+/* ==========================================================
+   WEBSITE POLICY PAGE
+========================================================== */
+
+/* ==========================================
+   POLICY SECTION
+========================================== */
+
+.policy-section {
+
+    padding: 80px 0;
+
+    background: #F8F8F8;
+
+}
+
+.policy-section h1 {
+
+    font-size: 52px;
+
+    font-weight: 800;
+
+    color: #F26A21;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+
+}
+
+.policy-section p {
+
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 40px;
+
+}
+
+/* ==========================================
+   POLICY CARD
+========================================== */
+
+.policy-card {
+
+    background: #1E1E1E;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    height: 100%;
+
+    transition: .3s;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+}
+
+.policy-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(242, 106, 33, .30);
+
+}
+
+.policy-card h3 {
+
+    color: #F26A21;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+}
+
+.policy-card ul {
+
+    padding-left: 20px;
+
+}
+
+.policy-card li {
+
+    color: #EEEEEE;
+
+    margin-bottom: 15px;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+}
+
+/* ==========================================
+   POLICY NOTE
+========================================== */
+
+.policy-note {
+
+    margin-top: 25px;
+
+    padding: 15px 18px;
+
+    background: #2D2D2D;
+
+    border: 1px solid #F26A21;
+
+    border-radius: 10px;
+
+    color: #FFFFFF;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+.policy-note i {
+
+    color: #F26A21;
+
+    margin-right: 8px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px) {
+
+    .policy-section {
+
+        padding: 60px 0;
+
+    }
+
+    .policy-section h1 {
+
+        font-size: 38px;
+
+    }
+
+    .policy-card {
+
+        margin-bottom: 30px;
+
+    }
+
+}

@@ -1,0 +1,640 @@
+/* ==========================================================
+   LOGIN PAGE
+   Purpose:
+   Style the FitLife Gym Login Page.
+========================================================== */
+
+.login-section {
+
+    padding: 80px 0;
+
+    background: #F8F8F8;
+
+}
+
+/* ==========================
+   LOGIN CONTAINER
+========================== */
+
+.login-wrapper {
+
+    background: #FFFFFF;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .10);
+
+    align-items: stretch;
+
+}
+
+/* ==========================
+   LEFT SIDE
+========================== */
+
+.login-left {
+
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+}
+
+.login-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.login-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .45);
+
+}
+
+.login-content {
+
+    position: absolute;
+
+    left: 40px;
+
+    right: 40px;
+
+    bottom: 40px;
+
+    z-index: 5;
+
+}
+
+.login-left::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, .45);
+
+    z-index: 2;
+
+}
+
+.login-left h2 {
+
+    color: #F26A21;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+}
+
+.login-left p {
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+}
+
+/* ==========================
+   FEATURES
+========================== */
+
+.login-features {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+.feature {
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 3;
+
+}
+
+.feature i {
+
+    font-size: 32px;
+
+    color: #F26A21;
+
+    margin-bottom: 10px;
+
+}
+
+.feature span {
+
+    display: block;
+
+    color: #FFFFFF;
+
+    font-size: 15px;
+
+}
+
+/* ==========================
+   RIGHT SIDE
+========================== */
+
+.login-right {
+
+    padding: 50px;
+
+    background: #FFFFFF;
+
+    height: auto;
+
+}
+
+.login-right h4 {
+
+    color: #1E1E1E;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.login-right label {
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    display: block;
+
+}
+
+.form-control {
+
+    height: 55px;
+
+    border-radius: 10px;
+
+    border: 1px solid #CCCCCC;
+
+}
+
+.form-control:focus {
+
+    border-color: #F26A21;
+
+    box-shadow: 0 0 10px rgba(242, 106, 33, .20);
+
+}
+
+.input-group-text {
+
+    background: #F8F8F8;
+
+}
+
+/* ==========================
+   LOGIN BUTTON
+========================== */
+
+.login-btn {
+
+    width: 100%;
+
+    height: 55px;
+
+    background: #F26A21;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+.login-btn:hover {
+
+    background: #1E1E1E;
+
+}
+
+
+/* ==========================
+   REGISTER
+========================== */
+
+.register-link {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 16px;
+
+}
+
+.register-link a {
+
+    color: #F26A21;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+.register-link a:hover {
+
+    color: #1E1E1E;
+
+}
+
+/* ==========================================================
+   MEMBER REGISTRATION
+========================================================== */
+
+.register-section {
+
+    background: #F5F5F5;
+
+    padding: 40px 0 80px;
+
+}
+
+.register-section h1 {
+
+    color: #F26A21;
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+}
+
+.register-section p {
+
+    color: #666;
+
+    font-size: 18px;
+
+}
+
+.register-wrapper {
+
+    background: #FFFFFF;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .10);
+
+    align-items: stretch;
+
+}
+
+.register-left {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 100%;
+
+    overflow: hidden;
+
+    padding: 45px;
+
+    background: #1E1E1E;
+
+}
+
+.register-right {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 45px;
+
+}
+
+.register-right label {
+
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #1E1E1E;
+
+    margin-bottom: 8px;
+
+}
+
+.register-right .form-control {
+
+    height: 55px;
+
+    border-radius: 10px;
+
+    border: 1px solid #CCCCCC;
+
+    font-size: 16px;
+
+}
+
+.register-right .input-group-text {
+
+    background: #F8F8F8;
+
+    border: 1px solid #CCCCCC;
+
+    color: #555;
+
+}
+
+.register-divider {
+
+    margin: 25px 0;
+
+    border: 0;
+
+    border-top: 1px solid #D9D9D9;
+
+}
+
+/* ==========================
+   LEFT SIDE
+========================== */
+
+.account-title {
+
+    margin-top: 45px;
+
+}
+
+.register-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.register-left::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .45);
+
+    z-index: 1;
+
+}
+
+.register-info {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: auto;
+
+}
+
+.register-info h3 {
+
+    color: #F26A21;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+.register-info p {
+
+    color: #DDDDDD;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+.register-feature {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.register-feature i {
+
+    color: #F26A21;
+
+    font-size: 28px;
+
+}
+
+.register-feature h6 {
+
+    color: #FFFFFF;
+
+    margin-bottom: 5px;
+
+    font-weight: 600;
+
+}
+
+.register-feature small {
+
+    color: #CCCCCC;
+
+}
+
+/* ==========================
+   REGISTER BUTTON
+========================== */
+
+.register-btn {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #F26A21;
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+.register-btn:hover {
+
+    background: #1E1E1E;
+
+}
+
+.login-link {
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+}
+
+.login-link a {
+
+    color: #F26A21;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+}
+
+.login-link a:hover {
+
+    color: #1E1E1E;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:991px) {
+
+    .login-left {
+
+        padding: 30px;
+
+    }
+
+    .login-right {
+
+        padding: 35px;
+
+    }
+
+    .login-image {
+
+        height: 250px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .login-features {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+    }
+
+    .login-right {
+
+        padding: 30px;
+
+    }
+
+    .login-left h2 {
+
+        font-size: 32px;
+
+    }
+
+}
