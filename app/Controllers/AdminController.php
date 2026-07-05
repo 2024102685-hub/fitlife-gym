@@ -42,18 +42,7 @@ class AdminController extends BaseController
 
     public function members()
     {
-        $memberModel = new \App\Models\MemberModel();
-
-        $data['members'] = $memberModel
-            ->orderBy('registration_date', 'DESC')
-            ->findAll();
-
-        return view('admin/members', $data);
-    }
-
-    public function manageMembers()
-    {
-        $memberModel = new \App\Models\MemberModel();
+        $memberModel = new MemberModel();
 
         $keyword = $this->request->getGet('search');
         $status = $this->request->getGet('status');
@@ -75,9 +64,11 @@ class AdminController extends BaseController
 
         }
 
-        $data['members'] = $builder->findAll();
+        $data['members'] = $builder
+            ->orderBy('registration_date', 'DESC')
+            ->findAll();
 
-        return view('admin/manage_members', $data);
+        return view('admin/members', $data);
     }
 
     public function viewMember($id)

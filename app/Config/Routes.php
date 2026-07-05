@@ -39,7 +39,7 @@ $routes->post('/member/payment/save', 'MemberController::savePayment');
 
 $routes->get('/admin/dashboard', 'AdminController::dashboard');
 
-$routes->get('/admin/members', 'AdminController::manageMembers');
+$routes->get('/admin/members', 'AdminController::members');
 
 $routes->get('/admin/member/view/(:any)', 'AdminController::viewMember/$1');
 

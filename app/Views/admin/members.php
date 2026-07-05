@@ -2,27 +2,96 @@
 
 <?= $this->section('content'); ?>
 
+<?php if (session()->getFlashdata('success')): ?>
+
+    <div class="alert alert-success alert-dismissible fade show">
+
+        <?= session()->getFlashdata('success'); ?>
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+
+    </div>
+
+<?php endif; ?>
+
 <div class="dashboard-card">
 
     <div class="d-flex justify-content-between align-items-center mb-4">
 
-        <h3>Manage Members</h3>
+        <h3>
 
-        <div class="d-flex gap-2">
+            Manage Members
 
-            <input type="text" class="form-control" placeholder="Search member..." style="width:250px;">
+        </h3>
 
-            <select class="form-select" style="width:180px;">
+    </div>
 
-                <option>All Members</option>
-                <option>Active</option>
-                <option>Pending</option>
+    <!-- =========================
+         Search & Filter
+    ========================== -->
 
-            </select>
+    <form method="get" action="<?= base_url('/admin/members'); ?>">
+
+        <div class="row mb-4">
+
+            <div class="col-md-6">
+
+                <input
+                    type="text"
+                    name="search"
+                    class="form-control"
+                    placeholder="Search Member ID or Name..."
+                    value="<?= esc($_GET['search'] ?? '') ?>">
+
+            </div>
+
+            <div class="col-md-3">
+
+                <select name="status" class="form-select">
+
+                    <option value="">
+
+                        All Status
+
+                    </option>
+
+                    <option value="Active"
+                        <?= (($_GET['status'] ?? '') == 'Active') ? 'selected' : ''; ?>>
+
+                        Active
+
+                    </option>
+
+                    <option value="Pending"
+                        <?= (($_GET['status'] ?? '') == 'Pending') ? 'selected' : ''; ?>>
+
+                        Pending
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <button type="submit" class="btn btn-warning w-100">
+
+                    <i class="bi bi-search me-2"></i>
+
+                    Search
+
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
+    </form>
+
+    <!-- =========================
+         Members Table
+    ========================== -->
 
     <div class="table-responsive">
 
@@ -32,17 +101,41 @@
 
                 <tr>
 
-                    <th>Member ID</th>
+                    <th>
 
-                    <th>Full Name</th>
+                        Member ID
 
-                    <th>Email</th>
+                    </th>
 
-                    <th>Plan</th>
+                    <th>
 
-                    <th>Status</th>
+                        Full Name
 
-                    <th width="180">Action</th>
+                    </th>
+
+                    <th>
+
+                        Email
+
+                    </th>
+
+                    <th>
+
+                        Plan
+
+                    </th>
+
+                    <th>
+
+                        Status
+
+                    </th>
+
+                    <th width="180">
+
+                        Action
+
+                    </th>
 
                 </tr>
 
@@ -50,74 +143,97 @@
 
             <tbody>
 
-                <?php foreach ($members as $member): ?>
+                <?php if (!empty($members)): ?>
+
+                    <?php foreach ($members as $member): ?>
+
+                        <tr>
+
+                            <td>
+
+                                <?= esc($member['member_id']) ?>
+
+                            </td>
+
+                            <td>
+
+                                <?= esc($member['full_name']) ?>
+
+                            </td>
+
+                            <td>
+
+                                <?= esc($member['email']) ?>
+
+                            </td>
+
+                            <td>
+
+                                <?= empty($member['plan_id']) ? '-' : esc($member['plan_id']) ?>
+
+                            </td>
+
+                            <td>
+
+                                <?php if ($member['membership_status'] == "Active"): ?>
+
+                                    <span class="status-badge status-active">
+
+                                        Active
+
+                                    </span>
+
+                                <?php else: ?>
+
+                                    <span class="status-badge status-pending">
+
+                                        Pending
+
+                                    </span>
+
+                                <?php endif; ?>
+
+                            </td>
+
+                            <td>
+
+                                <a href="<?= base_url('/admin/member/view/' . $member['member_id']); ?>"
+                                    class="btn btn-sm btn-primary">
+
+                                    <i class="bi bi-eye"></i>
+
+                                    View
+
+                                </a>
+
+                                <a href="<?= base_url('/admin/member/edit/' . $member['member_id']); ?>"
+                                    class="btn btn-sm btn-dark text-white">
+
+                                    <i class="bi bi-pencil"></i>
+
+                                    Edit
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                    <?php endforeach; ?>
+
+                <?php else: ?>
 
                     <tr>
 
-                        <td>
-                            <?= esc($member['member_id']) ?>
-                        </td>
+                        <td colspan="6" class="text-center text-muted">
 
-                        <td>
-                            <?= esc($member['full_name']) ?>
-                        </td>
-
-                        <td>
-                            <?= esc($member['email']) ?>
-                        </td>
-
-                        <td>
-
-                            <?= empty($member['plan_id']) ? '-' : esc($member['plan_id']) ?>
-
-                        </td>
-
-                        <td>
-
-                            <?php if ($member['membership_status'] == "Active"): ?>
-
-                                <span class="status-badge status-active">
-
-                                    Active
-
-                                </span>
-
-                            <?php else: ?>
-
-                                <span class="status-badge status-pending">
-
-                                    Pending
-
-                                </span>
-
-                            <?php endif; ?>
-
-                        </td>
-
-                        <td>
-
-                            <a href="<?= base_url('/admin/member/view/' . $member['member_id']); ?>"
-                                class="btn btn-sm btn-primary">
-
-                                <i class="bi bi-eye"></i>
-
-                                View
-
-                            </a>
-
-                            <a href="#" class="btn btn-sm btn-warning">
-
-                                <i class="bi bi-pencil"></i>
-
-                                Edit
-
-                            </a>
+                            No members found.
 
                         </td>
 
                     </tr>
 
-                <?php endforeach; ?>
+                <?php endif; ?>
 
             </tbody>
 
